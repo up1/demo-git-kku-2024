@@ -2,6 +2,6 @@ services:
   pm2:
     build:
       context: .
-    image: api-node:1.0
+    image: ${MY_IMAGE_NAME:-api-node}:1.0
     ports:
-      - "3000:3000"
+      - "${MY_PORT:-3000}:3000"
